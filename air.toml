@@ -1,0 +1,34 @@
+# Configurasi Air (air.toml)
+
+# Root folder untuk proyek
+root = "."
+
+[build]
+# File/folder yang akan dipantau
+include_ext = ["go"]
+
+# File/folder yang diabaikan untuk dipantau
+exclude = ["tmp/*", "client/*"]
+
+# Perintah untuk membangun proyek
+cmd = "go build -o ./bin/app"
+
+# Perintah untuk menjalankan proyek yang sudah dibangun
+bin = "./bin/app"
+
+# Pengaturan mode warna di terminal
+color = "true"
+
+# Menentukan apakah air menampilkan log waktu saat reload
+timestamp = "true"
+
+# Pengaturan untuk menunda eksekusi reload dalam milidetik
+delay = 1000
+
+# Nama file untuk menyimpan output log air
+log = "air.log"
+
+# Pengaturan untuk mode development
+[dev]
+# Perintah khusus saat menjalankan aplikasi di mode dev
+cmd = "go run main.go"
